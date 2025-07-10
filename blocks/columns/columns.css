@@ -1,4 +1,4 @@
-
+ 
 .columns > div {
   display: flex;
   flex-direction: column;
@@ -101,3 +101,75 @@
 /* --- merged .columns.columns28 block --- */
 
 /* No separate .columns.columns28 block was present in either snippet, so nothing else to merge for .columns.columns28 */
+
+
+.columns.columns18 {
+  background: #fff;
+  padding: 32px 0;
+}
+
+.columns.columns18 > div {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(240px, 1fr));
+  gap: 32px 48px;
+  align-items: center;
+}
+
+@media (width <= 900px) {
+  .columns.columns18 > div {
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
+    gap: 28px 24px;
+  }
+}
+
+@media (width <= 600px) {
+  .columns.columns18 > div {
+    grid-template-columns: 1fr;
+    gap: 16px 0;
+  }
+}
+
+.columns.columns18 > div > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  min-width: 0;
+  height: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.columns.columns18 > div > div > p {
+  margin: 0;
+  align-self: center;
+}
+
+.columns.columns18 > div > div > p:first-child {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.columns.columns18 > div > div > p:first-child picture,
+.columns.columns18 > div > div > p:first-child img {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  min-height: 20px;
+  display: block;
+  object-fit: contain;
+}
+
+.columns.columns18 > div > div > p:last-child {
+  color: #444;
+  font-size: 12px;
+  line-height: 1.4;
+  font-weight: 400;
+  text-align: left;
+  margin: 0;
+  overflow-wrap: break-word;
+  align-self: center;
+}
+
