@@ -1,4 +1,4 @@
-.tabs .tabs-list {
+.tabs .tabs-list { 
   display: flex;
   gap: 0.5ch;
   max-width: 100%;
@@ -39,7 +39,6 @@
   margin: 0;
 }
 
-
 .tabs .tabs-list button[aria-selected='true'] {
   border-bottom: 1px solid var(--background-color);
   background-color: var(--background-color);
@@ -55,4 +54,210 @@
 
 .tabs .tabs-panel[aria-hidden='true'] {
   display: none;
+}
+
+/* START GENERATED CSS (unchanged except .tabs.tabs21 merged at bottom) */
+
+.tabs.tabs21 .tabs-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 2.2rem;
+  border: none;
+  margin: 0;
+  padding: 30px 0 6px;
+  background: transparent;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+/* Tab Button */
+.tabs.tabs21 .tabs-tab {
+  background: none;
+  border: none;
+  box-shadow: none;
+  color: #7d7d7d;
+  font-family: var(--heading-font-family), Syncopate, Arial, sans-serif;
+  font-size: 1.11rem;
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  position: relative;
+  padding: 0 0 1.5px;
+  margin: 0;
+  transition: color 0.2s;
+  outline: none;
+  line-height: 1.05;
+  min-width: 0;
+  text-align: center;
+  background-clip: padding-box;
+  cursor: pointer;
+}
+
+.tabs.tabs21 .tabs-tab[aria-selected="true"] {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 1.5px;
+}
+
+.tabs.tabs21 .tabs-panel p {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.tabs.tabs21 .tabs-list button,
+.tabs.tabs21 .tabs-list button[aria-selected="true"] {
+  background: none;
+  border: none;
+  box-shadow: none;
+  font-weight: 500;
+}
+
+.tabs.tabs21 .tabs-list button p {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+}
+
+/* Panel Layout */
+.tabs.tabs21 .tabs-panel {
+  background: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+  justify-content: center;
+  align-items: stretch;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.tabs.tabs21 .tabs-panel[aria-hidden="false"] {
+  display: flex;
+}
+
+.tabs.tabs21 .tabs-panel > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  max-width: none;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* Heading Layout */
+.tabs.tabs21 .tabs-panel h3 {
+  font-family: var(--heading-font-family), Syncopate, Arial, sans-serif;
+  color: #fff;
+  font-size: 2.05rem;
+  letter-spacing: 0.13em;
+  line-height: 1.02;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+  margin: 0 auto 54px;
+  padding: 0;
+  width: 100%;
+  max-width: 480px;
+  word-break: break-all;
+}
+
+/* Image Wrapper & Image Layout */
+.tabs.tabs21 .tabs-panel picture {
+  display: block;
+  width: 96vw;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.tabs.tabs21 .tabs-panel img {
+  display: block;
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  border-radius: 24px;
+  background: #181818;
+  margin: 0 auto;
+  box-shadow: none;
+}
+
+/* Responsive adjustments */
+
+@media (width <= 1280px) {
+  .tabs.tabs21 .tabs-panel picture {
+    max-width: 1000px;
+    width: 92vw;
+  }
+
+  .tabs.tabs21 .tabs-panel img {
+    height: 270px;
+    border-radius: 18px;
+  }
+}
+
+@media (width <= 900px) {
+  .tabs.tabs21 .tabs-list {
+    gap: 1rem;
+    padding: 16px 0 4px;
+    min-width: 0;
+  }
+
+  .tabs.tabs21 .tabs-panel > div {
+    max-width: 100vw;
+    padding: 0 4px;
+  }
+
+  .tabs.tabs21 .tabs-panel h3 {
+    font-size: 1rem;
+    margin-bottom: 14px;
+    max-width: 94vw;
+  }
+
+  .tabs.tabs21 .tabs-panel picture {
+    max-width: 99vw;
+    width: 99vw;
+    margin-top: 16px;
+  }
+
+  .tabs.tabs21 .tabs-panel img {
+    height: 90px;
+    border-radius: 9px;
+  }
+}
+
+@media (width <= 600px) {
+  .tabs.tabs21 .tabs-list {
+    gap: 0.4rem;
+    padding: 7px 0 2px;
+  }
+
+  .tabs.tabs21 .tabs-panel h3 {
+    font-size: 0.83rem;
+    margin-bottom: 6px;
+  }
+
+  .tabs.tabs21 .tabs-panel picture {
+    width: 99vw;
+    max-width: 99vw;
+    margin-top: 5px;
+  }
+}
+
+/* MERGED .tabs.tabs21 SELECTOR (COMBINED) */
+.tabs.tabs21 {
+  background: #000;
+  margin: 0;
+  padding: 0;
+  min-width: 100vw;
+  width: 100vw;
+  max-width: 100vw;
+  box-sizing: border-box;
+  position: relative;
 }
