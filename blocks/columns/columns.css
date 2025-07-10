@@ -1,3 +1,5 @@
+/* Ensure rule ordering to resolve no-descending-specificity */
+
 .columns > div {
   display: flex;
   flex-direction: column;
@@ -21,8 +23,7 @@
 
 /* --- generated CSS --- */
 
-/* Merged .columns.columns28 selector below */
-
+/* 1. Columns 28 (most specific, appears first) */
 .columns.columns28 > div {
   display: flex;
   flex-direction: row;
@@ -82,10 +83,7 @@
   }
 }
 
-/* --- merged .columns.columns28 block --- */
-
-/* No separate .columns.columns28 block was present in either snippet, so nothing else to merge for .columns.columns28 */
-
+/* 2. Columns 18 (put before .columns.columns9 and .columns.columns3 for no-descending-specificity) */
 .columns.columns18 {
   background: #fff;
   padding: 32px 0;
@@ -165,6 +163,16 @@
   }
 }
 
+.columns.columns18 > div > div > p:first-child img {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  min-height: 20px;
+  display: block;
+  object-fit: contain;
+}
+
+/* 3. Columns 9 (after 18, before 3) */
 .columns.columns9 {
   background: #000;
   color: #fff;
@@ -359,5 +367,144 @@
   .columns.columns9 > div > div {
     max-width: 100%;
     min-width: 0;
+  }
+}
+
+/* 4. Columns 3 (must come after 9 and 18 for specificity) */
+.columns.columns3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 80vh;
+}
+
+.columns.columns3 > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 180px;
+  min-height: 400px;
+  padding: 0;
+}
+
+.columns.columns3 > div > div:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 370px;
+  flex: 1 1 0;
+}
+
+.columns.columns3 h2 {
+  font-family: Syncopate, var(--heading-font-family), sans-serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: normal;
+  color: #161616;
+  margin-bottom: 18px;
+  line-height: 1.1;
+  text-transform: none;
+}
+
+.columns.columns3 > div > div:first-child > p {
+  color: #161616;
+  font-size: 1rem;
+  font-family: var(--body-font-family), sans-serif;
+  margin: 0 0 0.8em;
+  max-width: 360px;
+}
+
+.columns.columns3 > div > div:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  min-width: 240px;
+  flex: 0 0 260px;
+}
+
+.columns.columns3 > div > div:last-child p {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.columns.columns3 > div > div:last-child a {
+  display: block;
+  width: 240px;
+  height: 42px;
+  line-height: 42px;
+  text-align: center;
+  border: 1px solid #161616;
+  border-radius: 24px;
+  background: #fff;
+  color: #161616;
+  font-size: 1rem;
+  font-family: var(--body-font-family), sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  margin: 0;
+  transition: box-shadow 0.2s, border-color 0.2s;
+  box-shadow: none;
+  position: relative;
+}
+
+.columns.columns3 > div > div:last-child a:first-child {
+  border-bottom: 2px solid #ffff63;
+  border-right: 2px solid #ffff63;
+  border-top: 1px solid #161616;
+  border-left: 1px solid #161616;
+}
+
+.columns.columns3 > div > div:last-child a:hover,
+.columns.columns3 > div > div:last-child a:focus {
+  background: #f8f8f8;
+  color: #161616;
+  text-decoration: none;
+}
+
+@media (width <= 1100px) {
+  .columns.columns3 > div {
+    gap: 60px;
+    min-height: 340px;
+  }
+}
+
+@media (width <= 900px) {
+  .columns.columns3 {
+    min-height: unset;
+  }
+  .columns.columns3 > div {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 40px;
+    padding: 40px 0;
+    min-height: unset;
+  }
+  .columns.columns3 > div > div:last-child {
+    align-items: flex-start;
+  }
+  .columns.columns3 > div > div:last-child a {
+    width: 100%;
+    min-width: 180px;
+    max-width: 240px;
+  }
+}
+
+@media (width <= 600px) {
+  .columns.columns3 > div {
+    padding: 24px 0;
+    gap: 24px;
+  }
+  .columns.columns3 h2 {
+    font-size: 1.5rem;
+  }
+  .columns.columns3 > div > div:first-child {
+    max-width: 100%;
   }
 }
