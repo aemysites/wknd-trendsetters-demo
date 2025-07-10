@@ -38,7 +38,6 @@ header nav[aria-expanded='true'] {
     max-width: 1264px;
     padding: 0 32px;
   }
-
   header nav[aria-expanded='true'] {
     min-height: 0;
     overflow: visible;
@@ -133,6 +132,16 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
     display: none;
     visibility: hidden;
   }
+  .header-wrapper .nav-hamburger {
+    display: none;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: -9999px;
+  }
 }
 
 /* brand */
@@ -142,13 +151,21 @@ header .nav-brand {
   font-size: var(--heading-font-size-s);
   font-weight: 700;
   line-height: 1;
+  display: flex;
+  align-items: center;
+  margin-right: 32px;
+  min-width: 32px;
+  height: 48px;
 }
 
 header nav .nav-brand img {
-  width: auto;
-  height: 100%;
   max-height: calc(var(--nav-height) - 16px);
   max-width: 128px;
+  object-fit: contain;
+  display: block;
+  vertical-align: middle;
+  width: 32px;
+  height: 32px;
 }
 
 /* sections */
@@ -157,6 +174,19 @@ header nav .nav-sections {
   flex: 1 1 auto;
   display: none;
   visibility: hidden;
+  order: 2;
+  align-items: center;
+  min-width: 0;
+  height: 48px;
+}
+
+.header-wrapper nav .nav-sections {
+  order: 2;
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 48px;
 }
 
 header nav[aria-expanded='true'] .nav-sections {
@@ -167,12 +197,25 @@ header nav[aria-expanded='true'] .nav-sections {
 
 header nav .nav-sections ul {
   list-style: none;
-  padding-left: 0;
   font-size: var(--body-font-size-s);
+  margin: 0;
+  padding-left: 0;
 }
 
 header nav .nav-sections ul > li {
-  font-weight: 500;
+  position: relative;
+  font-size: 14px;
+  color: #222;
+  font-weight: 400;
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1.2;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  height: 48px;
 }
 
 header nav .nav-sections ul > li > ul {
@@ -181,6 +224,23 @@ header nav .nav-sections ul > li > ul {
 
 header nav .nav-sections ul > li > ul > li {
   font-weight: 400;
+  padding: 8px 0;
+}
+
+header nav .nav-sections a,
+header nav .nav-sections strong a {
+  color: #222;
+  font-size: 14px;
+  font-weight: 400;
+  background: none;
+  border: none;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  height: 48px;
 }
 
 @media (width >= 900px) {
@@ -258,13 +318,250 @@ header nav .nav-sections ul > li > ul > li {
     border-right: 8px solid transparent;
     border-bottom: 8px solid var(--light-color);
   }
-
-  header nav .nav-sections .default-content-wrapper > ul > li > ul > li {
-    padding: 8px 0;
-  }
 }
 
 /* tools */
 header nav .nav-tools {
   grid-area: tools;
+  order: 3;
+  display: flex;
+  align-items: center;
+  margin-left: 32px;
+  gap: 16px;
+  min-width: 120px;
+  height: 48px;
+}
+
+/* --- Begin Generated CSS (EXPERIMENT 4) --- */
+
+.header-wrapper {
+  width: 100%;
+  background: #F9FAF7;
+}
+
+.header-wrapper .nav-wrapper {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  background: #F9FAF7;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 48px;
+  display: flex;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  background: #F9FAF7;
+  min-height: 48px;
+}
+
+.header-wrapper nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1264px;
+  width: 100%;
+  padding: 0 32px;
+  box-sizing: border-box;
+  background: #F9FAF7;
+  height: 48px;
+}
+
+.header-wrapper .nav-hamburger {
+  display: none;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  left: -9999px;
+}
+
+header .header-wrapper nav .nav-hamburger {
+  display: none;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  left: -9999px;
+}
+
+.header-wrapper nav .nav-brand {
+  order: 1;
+  display: flex;
+  align-items: center;
+  margin-right: 32px;
+  min-width: 32px;
+  height: 48px;
+}
+
+.header-wrapper nav .nav-brand img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  display: block;
+  vertical-align: middle;
+}
+
+.header-wrapper nav .nav-sections {
+  order: 2;
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 48px;
+}
+
+.header-wrapper nav .nav-sections .default-content-wrapper > ul {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height: 48px;
+}
+
+.header-wrapper nav .nav-sections .default-content-wrapper > ul > li {
+  position: relative;
+  font-size: 14px;
+  color: #222;
+  font-weight: 400;
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1.2;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  height: 48px;
+}
+
+.header-wrapper nav .nav-sections a,
+.header-wrapper nav .nav-sections strong a {
+  color: #222;
+  font-size: 14px;
+  font-weight: 400;
+  background: none;
+  border: none;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  height: 48px;
+}
+
+/* Dropdown arrows - subtle, centered, small */
+.header-wrapper nav .nav-sections .nav-drop::after {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-width: 1px 1px 0 0;
+  border-style: solid;
+  border-color: #222;
+  margin-left: 4px;
+  transform: rotate(135deg);
+  vertical-align: middle;
+  position: relative;
+  top: 0.5px;
+  background: none;
+}
+
+.header-wrapper nav .nav-tools {
+  order: 3;
+  display: flex;
+  align-items: center;
+  margin-left: 32px;
+  gap: 16px;
+  min-width: 120px;
+  height: 48px;
+}
+
+.header-wrapper .button-container {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  height: 48px;
+}
+
+.header-wrapper .button-container .button {
+  background: #fff;
+  color: #222;
+  border: 1.5px solid #222;
+  border-radius: 999px;
+  padding: 4px 22px;
+  font-size: 14px;
+  font-weight: 400;
+  box-shadow: 0 2px 0 0 #f8f77d;
+  line-height: 1.2;
+  margin: 0;
+  min-width: 0;
+  min-height: 0;
+  max-height: 36px;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  transition: box-shadow 0.15s, border-color 0.15s;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.header-wrapper nav .nav-tools img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  display: block;
+  margin-left: 8px;
+}
+
+/* Responsive for mobile: stack elements */
+@media (width <= 900px) {
+  .header-wrapper .nav-wrapper,
+  header {
+    height: auto;
+    min-height: 0;
+  }
+  .header-wrapper nav {
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 64px;
+    height: auto;
+    padding: 0 16px;
+  }
+  .header-wrapper nav .nav-brand,
+  .header-wrapper nav .nav-sections,
+  .header-wrapper nav .nav-tools {
+    margin: 0 0 16px;
+    height: auto;
+  }
+  .header-wrapper nav .nav-sections .default-content-wrapper > ul {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .header-wrapper nav .nav-tools {
+    margin-left: 0;
+  }
+}
+
+/* --- Merged .header selector --- */
+.header {
+  display: flex;
+  width: 100%;
+  background: #F9FAF7;
+  min-height: 48px;
 }
