@@ -1,27 +1,3 @@
-.cards > ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-  grid-gap: 24px;
-}
+.cards > ul {  list-style: none;  margin: 0;  padding: 0;  display: grid;  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));  grid-gap: 24px;}.cards > ul > li {  border: 1px solid #dadada;  background-color: var(--background-color);}.cards .cards-card-body {  margin: 16px;}.cards .cards-card-image {  line-height: 0;}.cards > ul > li img {  width: 100%;  aspect-ratio: 4 / 3;  object-fit: cover;}.cards.cards32 {  background: #fafafa;  padding: 12px 0;  width: 100%;  box-sizing: border-box;}/* Grid: tighter columns and gaps */.cards.cards32 > ul {  display: grid;  grid-template-columns: repeat(2, 1fr);  gap: 12px;  list-style: none;  padding: 0;  margin: 0 auto;  max-width: 1320px;}/* Card: minimal padding, less radius, lighter shadow, stretch content */.cards.cards32 > ul > li {  display: flex;  flex-direction: row;  align-items: stretch;  background: #fff;  border-radius: 9px;  box-shadow: 0 1px 3px rgb(22 22 31 / 3%), 0 0.5px 1.5px rgb(22 22 31 / 3%);  border: none;  padding: 10px;  min-height: 135px;  box-sizing: border-box;  margin: 0;  transition: box-shadow 0.13s;}/* Image: fill height, no aspect ratio, no extra min/max, no margin */.cards.cards32 .cards-card-image {  flex: 0 0 45%;  max-width: 45%;  border-radius: 8px;  overflow: hidden;  margin: 0;  display: flex;  align-items: stretch;  height: auto;}.cards.cards32 .cards-card-image picture,.cards.cards32 .cards-card-image img {  width: 100%;  height: 100%;  display: block;  min-height: 0;  min-width: 0;  max-width: 100%;  max-height: 100%;}.cards.cards32 .cards-card-image img {  object-fit: cover;  border-radius: 8px;  min-height: 0;  aspect-ratio: unset;}/* Text: fill height, less gap, tighter margin left */.cards.cards32 .cards-card-body {  flex: 1 1 55%;  margin-left: 14px;  padding: 0;  display: flex;  flex-direction: column;  justify-content: flex-start;  align-items: flex-start;  min-width: 0;  gap: 0;  height: 100%;}/* Meta row: tag & min read inline, very tight margin */.cards.cards32 .cards-card-body .cards-meta-row {  display: flex;  align-items: center;  gap: 5px;  margin-bottom: 2px;  margin-top: 0;  padding: 0;}/* Remove vertical spacing above/below text elements */.cards.cards32 .cards-card-body p,.cards.cards32 .cards-card-body h3 {  margin-top: 0;}/* Tag badge */.cards.cards32 .cards-card-body p:first-child {  display: inline-block;  background: #e9eaf2;  color: #2a2a2a;  font-size: 13px;  font-weight: 600;  border-radius: 6px;  padding: 2px 8px;  text-transform: uppercase;  letter-spacing: 0.03em;  margin: 0 6px 0 0;  line-height: 1.4;  vertical-align: middle;}/* Min read inline, tight spacing */.cards.cards32 .cards-card-body p:nth-child(2) {  display: inline-block;  color: #767676;  font-size: 12px;  font-weight: 400;  margin: 0;  vertical-align: middle;  background: none;  letter-spacing: normal;  line-height: 1.4;  padding: 0;}/* Inline badge/min-read row (utility) */.cards.cards32 .cards-card-body p:first-child,.cards.cards32 .cards-card-body p:nth-child(2) {  display: inline-block;  vertical-align: middle;  margin-bottom: 0;}/* Headline: less margin, tight to meta row */.cards.cards32 .cards-card-body h3 {  margin: 2px 0 3px;  font-size: 22px;  color: #202020;  font-family: var(--heading-font-family);  font-weight: 700;  line-height: 1.13;  letter-spacing: .01em;}/* Description: compact, little margin */.cards.cards32 .cards-card-body p:nth-child(4) {  color: #555;  font-size: 16px;  margin: 0 0 3px;  font-weight: 400;  line-height: 1.38;  max-width: 100%;  overflow-wrap: break-word;  padding: 0;}/* "Read" link: minimal margin above */.cards.cards32 .cards-card-body p:last-child {  color: #007aff;  font-weight: 500;  font-size: 15px;  margin: 0;  cursor: pointer;  text-decoration: underline;  letter-spacing: 0.02em;  width: fit-content;  transition: color 0.14s;}.cards.cards32 .cards-card-body p:last-child:hover {  color: #005bb5;}/* Inline: no left margin (utility) */.cards.cards32 .cards-card-body p:first-child + p:nth-child(2) {  margin-left: 0;}/* Responsive: stack cards vertically and image on top */
 
-.cards > ul > li {
-  border: 1px solid #dadada;
-  background-color: var(--background-color);
-}
-
-.cards .cards-card-body {
-  margin: 16px;
-}
-
-.cards .cards-card-image {
-  line-height: 0;
-}
-
-.cards > ul > li img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-}
+@media (width <= 900px) {  .cards.cards32 > ul {    grid-template-columns: 1fr;    gap: 10px;    max-width: 100vw;  }  .cards.cards32 > ul > li {    flex-direction: column;    align-items: stretch;    padding: 8px 4px;    min-height: 0;  }  .cards.cards32 .cards-card-image,  .cards.cards32 .cards-card-body {    max-width: 100%;    width: 100%;  }  .cards.cards32 .cards-card-body {    margin-left: 0;    margin-top: 8px;  }}
