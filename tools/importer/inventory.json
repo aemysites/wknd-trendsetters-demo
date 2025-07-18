@@ -172,11 +172,11 @@
       ]
     },
     {
-      "name": "Columns",
+      "name": "Cards",
       "cluster": 2,
-      "source": "Columns",
-      "target": "Columns (columns2)",
-      "key": "columns2",
+      "source": "Cards",
+      "target": "Cards (cards2)",
+      "key": "cards2",
       "instances": [
         {
           "url": "https://www.wknd-trendsetters.site/blog/fashion-blog-post",
@@ -289,11 +289,11 @@
       ]
     },
     {
-      "name": "Columns",
+      "name": "Cards",
       "cluster": 5,
-      "source": "Columns",
-      "target": "Columns (columns5)",
-      "key": "columns5",
+      "source": "Cards",
+      "target": "Cards (cards5)",
+      "key": "cards5",
       "instances": [
         {
           "url": "https://www.wknd-trendsetters.site/fashion-trends-of-the-season",
@@ -371,11 +371,8 @@
       ]
     },
     {
-      "name": "Columns",
+      "name": "unknown",
       "cluster": 9,
-      "source": "Columns",
-      "target": "Columns (columns9)",
-      "key": "columns9",
       "instances": [
         {
           "url": "https://www.wknd-trendsetters.site/fashion-trends-young-adults-casual-sport",
@@ -520,11 +517,11 @@
       ]
     },
     {
-      "name": "Columns",
+      "name": "Cards",
       "cluster": 12,
-      "source": "Columns",
-      "target": "Columns (columns12)",
-      "key": "columns12",
+      "source": "Cards",
+      "target": "Cards (cards12)",
+      "key": "cards12",
       "instances": [
         {
           "url": "https://www.wknd-trendsetters.site/blog/latest-trends-young-casual-fashion",
@@ -604,11 +601,8 @@
       ]
     },
     {
-      "name": "Columns",
+      "name": "unknown",
       "cluster": 17,
-      "source": "Columns",
-      "target": "Columns (columns17)",
-      "key": "columns17",
       "instances": [
         {
           "url": "https://www.wknd-trendsetters.site/faq",
@@ -619,11 +613,11 @@
       ]
     },
     {
-      "name": "Columns",
+      "name": "Cards",
       "cluster": 18,
-      "source": "Columns",
-      "target": "Columns (columns18)",
-      "key": "columns18",
+      "source": "Cards",
+      "target": "Cards (cards18)",
+      "key": "cards18",
       "instances": [
         {
           "url": "https://www.wknd-trendsetters.site/",
